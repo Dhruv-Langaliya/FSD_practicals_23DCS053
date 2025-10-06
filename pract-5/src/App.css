@@ -1,0 +1,202 @@
+/* General App Styles */
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', 'Helvetica Neue', 'Arial', sans-serif; /* Similar to iOS font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000; /* Pure black background for body */
+  color: #ffffff;
+}
+
+/* Calculator Container Styles */
+.calculator {
+  background-color: #1a1a1a; /* Darker background for calculator body */
+  border-radius: 30px; /* More rounded corners */
+  padding: 25px; /* Slightly more padding */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+  width: 350px; /* Adjusted width */
+  max-width: 90%; /* Responsive consideration */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Screen Styles */
+.screen {
+  background-color: #1a1a1a; /* Match calculator body for seamless look */
+  border-radius: 15px; /* Rounded corners for screen area */
+  padding: 15px 20px;
+  margin-bottom: 25px; /* More space below screen */
+  text-align: right;
+  color: #ffffff;
+  overflow: hidden;
+  height: 120px; /* Fixed height for screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  position: relative; /* For the subtle top indicator */
+}
+
+/* Small, subtle indicator at the top-center of the screen, mimicking the image */
+.screen::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px; /* Width of the notch-like element */
+  height: 4px; /* Height of the notch */
+  background-color: #333333; /* Darker grey */
+  border-radius: 2px;
+}
+
+
+.screen .history-display {
+  font-size: 1.1em; /* Smaller font for previous calculation */
+  color: #a0a0a0; /* Lighter grey for subtle text */
+  min-height: 1.2em; /* Ensure some space for it */
+  margin-bottom: 5px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Keep text on one line */
+  direction: rtl; /* Right-to-left for scrolling from right */
+  padding-bottom: 5px; /* Space for scrollbar if present */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.screen .history-display::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.screen .current-input-wrapper {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Keep text on one line */
+  direction: rtl; /* Start text from the right */
+  flex-grow: 1; /* Allow it to take available space */
+  display: flex; /* Use flex to align content within scrollable div */
+  align-items: flex-end; /* Align content to the bottom */
+}
+
+.screen .current-input {
+  font-size: 3.2em; /* Larger font for current input */
+  font-weight: 500; /* Medium weight */
+  color: #ffffff; /* White for current input */
+  flex-grow: 1; /* Allow content to grow */
+  text-align: right; /* Ensure text is aligned right within its container */
+  line-height: 1.2; /* Adjust line height */
+  padding-bottom: 5px; /* Small padding for visual separation from scrollbar if needed */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.screen .current-input::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+/* Button Grid Styles */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 12px; /* Adjusted gap between buttons */
+  margin-top: 10px; /* Space from screen */
+}
+
+/* Individual Button Styles */
+.button {
+  background-color: #333333; /* Dark grey for number buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 18px; /* More rounded corners, slightly less than the calculator body */
+  font-size: 1.7em; /* Slightly larger font for buttons */
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px; /* Slightly taller buttons */
+  font-weight: 400; /* Regular font weight */
+}
+
+.button:hover {
+  background-color: #4a4a4a;
+}
+
+.button:active {
+  background-color: #222222;
+  transform: scale(0.98); /* Slight press effect */
+}
+
+/* Operator and DEL Button Styles (Reddish-Pink) */
+.operator, .del-button {
+  background-color: #ff4d6e; /* Reddish-pink color from image */
+  font-weight: 500; /* Slightly bolder for operators */
+}
+
+.operator:hover, .del-button:hover {
+  background-color: #ff6681;
+}
+
+.operator:active, .del-button:active {
+  background-color: #e63e5e;
+}
+
+/* Equals Button Styles (Same reddish-pink, spans two columns) */
+.equals-button {
+  background-color: #ff4d6e; /* Matches operators */
+  grid-column: span 2; /* Spans two columns */
+  font-weight: 500;
+}
+
+.equals-button:hover {
+  background-color: #ff6681;
+}
+
+.equals-button:active {
+  background-color: #e63e5e;
+}
+
+/* Zero Button Styles (Spans two columns) */
+.zero-button {
+  grid-column: span 2; /* Spans two columns */
+}
+
+/* Decimal Button Styles */
+.decimal-button {
+  /* No special background, inherits default button style */
+}
+
+/* Media Queries for smaller screens (optional but good practice) */
+@media (max-width: 400px) {
+  .calculator {
+    width: 95%;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .screen {
+    padding: 10px 15px;
+    height: 100px;
+  }
+  .screen .current-input {
+    font-size: 2.8em;
+  }
+  .screen .history-display {
+    font-size: 1em;
+  }
+  .button {
+    font-size: 1.5em;
+    height: 60px;
+    border-radius: 15px;
+  }
+  .button-grid {
+    gap: 10px;
+  }
+}

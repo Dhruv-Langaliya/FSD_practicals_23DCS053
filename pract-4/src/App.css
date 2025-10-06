@@ -1,0 +1,161 @@
+/* .app-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.counter-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Limit width for better appearance */
+}
+
+.count-display {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: bold; /* Match the bold "Count: 7" in the image */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.buttons-container button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+  min-width: 120px; /* Ensure buttons have a minimum width */
+}
+
+.buttons-container button:hover {
+  background-color: #0056b3;
+}
+
+.welcome-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.welcome-section h2 {
+  font-size: 2.2em;
+  color: #555;
+  margin: 0;
+  font-weight: normal; /* Match the normal weight in the image */
+}
+
+.form-section {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between input groups */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Slightly reduce space as per image */
+}
+
+.input-group label {
+  font-size: 1.1em;
+  color: #444;
+  margin-right: 15px;
+  min-width: 100px; /* Align labels */
+  text-align: right;
+}
+
+.input-group input[type="text"] {
+  flex-grow: 1; /* Allow input to take remaining space */
+  padding: 10px 12px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.input-group input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.displayed-names {
+  margin-top: 25px; /* Space above displayed names */
+  padding-top: 20px;
+  border-top: 1px solid #eee; /* A subtle line to separate */
+}
+
+.displayed-names p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 8px 0; /* Space between paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .counter-section, .welcome-section, .form-section {
+    padding: 25px 20px;
+  }
+
+  .count-display {
+    font-size: 2.5em;
+  }
+
+  .buttons-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.8em;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .input-group label {
+    text-align: left;
+    min-width: unset;
+    margin-right: 0;
+  }
+} */
