@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.weather-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.input-section input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-section button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+.weather-display {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    min-height: 80px; /* To prevent layout shift when content appears */
+}
+
+.weather-display p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.weather-display .city-name {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.weather-display .temperature {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e44d26; /* A reddish-orange for emphasis */
+}
+
+.weather-display .message {
+    color: #dc3545; /* Red for error messages */
+    font-weight: bold;
+}
